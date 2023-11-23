@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  margin: 40px 100px;
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__tip {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  &__editor {
+    width: 500px;
+  }
+
+  &__preview {
+    width: 500px;
+  }
+}

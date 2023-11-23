@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react'
-import { IMention } from '../at-mentions/types'
+import { IMention } from '../at-mentions-editor/types'
 import cls from 'classnames'
 import './index.scss'
 

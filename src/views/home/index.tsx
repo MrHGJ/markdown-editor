@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { AtMentions } from '@/components/at-mentions'
-import { IMention } from '@/components/at-mentions/types'
+import { AtMentionsEditor } from '@/components/at-mentions-editor'
+import { IMention } from '@/components/at-mentions-editor/types'
 import { AtMentionsPreview } from '@/components/at-mentions-preview'
 import './index.scss'
 
@@ -13,7 +13,7 @@ function Home() {
       <div>
         <div className='home__title'>@编辑器：</div>
         <div className='home__tip'>「输入@字符弹出人员搜索选择」</div>
-        <AtMentions
+        <AtMentionsEditor
           className='home__editor'
           value={pureString}
           mentions={mentionList}

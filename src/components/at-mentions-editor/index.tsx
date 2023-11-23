@@ -23,7 +23,7 @@ interface IProps {
   onCallBackRefAndRange?: (ref, range) => void
 }
 
-export const AtMentions = (props: IProps) => {
+export const AtMentionsEditor = (props: IProps) => {
   const {
     value,
     mentions = [],

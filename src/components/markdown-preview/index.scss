@@ -1,0 +1,263 @@
+.markdown-preview {
+  word-break: break-word;
+  line-height: 20px;
+  width: 100%;
+
+  // 列表样式
+  &__li {
+    display: flex;
+    padding-left: 5px;
+    line-height: 20px;
+    margin: 4px 0;
+
+    &__left {
+      flex-shrink: 0;
+      display: inline-block;
+      width: 22px;
+      height: 20px;
+
+      &__dot {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 8px;
+          left: 6px;
+          width: 5px;
+          height: 5px;
+          content: '';
+          background-color: currentcolor;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__right {
+      flex: 1;
+    }
+  }
+
+  pre {
+    background: #f5f7fa;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 10px 0;
+    color: #929aa6;
+    line-height: 21px;
+  }
+
+  code {
+    background: #f5f7fa;
+    padding: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #dee0e3;
+    margin: 0 1px;
+  }
+
+  pre > code {
+    border: none;
+  }
+
+  // 分割线样式
+  &__hr {
+    height: 1px;
+    margin: 16px 0;
+    background: #e5e5e5;
+  }
+
+  // 待办列表样式
+  &__input-icon {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #dfe2e8;
+    margin: 0;
+    border-radius: 2px;
+    transition: 0.3s ease-out;
+    line-height: 1;
+    flex: none;
+    background-color: #fff;
+    margin-top: -3px;
+    margin-right: 2px;
+
+    &--checked {
+      background-color: #237ffa;
+      border-color: #237ffa;
+
+      &::after {
+        transform: rotate(45deg) scaleY(1);
+        pointer-events: none;
+        box-sizing: content-box;
+        content: '';
+        border: 2px solid #fff;
+        border-left: 0;
+        border-top: 0;
+        height: 7px;
+        left: 4px;
+        position: absolute;
+        top: 1px;
+        width: 4px;
+        transform-origin: center;
+      }
+    }
+  }
+
+  // 信号灯样式
+  &__light {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 7px;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    &__red {
+      background: #ff5959;
+    }
+
+    &__green {
+      background: #14ca64;
+    }
+
+    &__yellow {
+      background: #fab007;
+    }
+  }
+
+  img {
+    width: 50%;
+    border-radius: 12px;
+    margin: 10px 0;
+    cursor: zoom-in;
+  }
+
+  .my-strong {
+    font-weight: 500;
+  }
+
+  // table样式
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+
+  th {
+    padding: 6px;
+    border: 1px solid #dfe2e8;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 6px;
+    border: 1px solid #dfe2e8;
+  }
+
+  thead,
+  tfoot {
+    background: #f2f4f7;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .my-h1 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #1f2733;
+    line-height: 34px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  .my-h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1f2733;
+    line-height: 31px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .my-h3 {
+    /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
+    @extend .my-h2;
+
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .my-h4 {
+    /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
+    @extend .my-h2;
+
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .my-h5,
+  .my-h6 {
+    /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
+    @extend .my-h2;
+
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  // 图片预览
+  .image-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+    background: #fff;
+
+    &__close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      cursor: pointer;
+    }
+
+    &__img {
+      max-width: 100%;
+      max-height: 100%;
+      animation: scale 0.2s ease-in;
+    }
+
+    @keyframes scale {
+      0% {
+        max-width: 20%;
+        max-height: 20%;
+      }
+
+      100% {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

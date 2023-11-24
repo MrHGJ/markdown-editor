@@ -67,7 +67,10 @@ export const AtMentionsEditor = (props: IProps) => {
         const btn = document.createElement('button')
         btn.dataset.person = JSON.stringify(item.data)
         btn.textContent = `@${item.data.userName}`
-        btn.setAttribute('style', 'color:#4387f4;border:none;background:transparent;padding:0;')
+        btn.setAttribute(
+          'style',
+          'color:#4387f4;border:none;background:transparent;padding:0;font-size:inherit',
+        )
         btn.contentEditable = 'false'
         btn.addEventListener(
           'click',
@@ -282,7 +285,10 @@ export const AtMentionsEditor = (props: IProps) => {
         const btn = document.createElement('button')
         btn.dataset.person = JSON.stringify(personItem)
         btn.textContent = `@${personItem.userName}`
-        btn.setAttribute('style', 'color:#4387f4;border:none;background:transparent;padding:0;')
+        btn.setAttribute(
+          'style',
+          'color:#4387f4;border:none;background:transparent;padding:0;font-size:inherit',
+        )
         btn.contentEditable = 'false'
         btn.addEventListener(
           'click',

@@ -7,6 +7,8 @@
   transition: border 0.3s, background-color 0.3s;
   caret-color: #0d84ff;
   word-break: break-all;
+  font-size: 14px;
+  line-height: 20px;
 
   &:hover {
     border: 2px solid rgba(13, 132, 255, 0.6);
@@ -21,7 +23,6 @@
   &__editor {
     box-sizing: border-box;
     padding: 12px;
-    line-height: 22px;
     border: none;
     //处理enter键换行生成新的div、破坏子节点结构的问题
     display: inline-block;

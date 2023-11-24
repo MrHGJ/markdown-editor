@@ -255,16 +255,7 @@ const MarkdownPreview = (props: IMarkdownViewProps) => {
   const renderMyLink = useCallback((props) => {
     const { href, children } = props
     return (
-      <a
-        style={{ wordBreak: 'break-all' }}
-        href={href}
-        target='_blank'
-        rel='noopener noreferrer'
-        onClick={(e) => {
-          const larkFileUrl = 'xiaomi.f.mioffice.cn'
-          const isLarkLink = href.includes(larkFileUrl)
-        }}
-      >
+      <a style={{ wordBreak: 'break-all' }} href={href} target='_blank' rel='noopener noreferrer'>
         {children}
       </a>
     )
@@ -339,7 +330,6 @@ const MarkdownPreview = (props: IMarkdownViewProps) => {
             setShowImgPreview(false)
           }}
         >
-          {/* <Icon className="image-preview__close" name="close-circle" style={{ fontSize: '24px' }} /> */}
           <img className='image-preview__img' src={curImgSrc} />
         </div>
       )}

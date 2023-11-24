@@ -1,5 +1,4 @@
 .mention-item {
-  font-size: 16px;
   word-break: break-all;
   white-space: pre-wrap;
   box-sizing: border-box;
@@ -84,7 +83,7 @@
     &__item {
       display: flex;
       align-items: center;
-      margin: 8px 0;
+      margin: 4px 0;
       padding: 10px 0 10px 16px;
       box-sizing: border-box;
       font-size: 14px;

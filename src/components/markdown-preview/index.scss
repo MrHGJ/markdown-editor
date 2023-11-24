@@ -1,7 +1,42 @@
 .markdown-preview {
   word-break: break-word;
+  font-size: 14px;
   line-height: 20px;
+  color: #1f2733;
   width: 100%;
+
+  * {
+    margin-block: 0;
+    padding-inline: 0;
+    margin-inline: 0;
+    padding-block: 0;
+  }
+
+  a {
+    color: #4285f4;
+    text-decoration: none;
+
+    &:focus {
+      color: #2e5dab;
+    }
+
+    &:hover {
+      color: #2e5dab;
+    }
+
+    &:active {
+      color: #689df6;
+    }
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  i {
+    font-style: normal;
+  }
 
   // 列表样式
   &__li {
@@ -44,6 +79,8 @@
     margin: 10px 0;
     color: #929aa6;
     line-height: 21px;
+    word-break: break-word;
+    white-space: break-spaces;
   }
 
   code {
@@ -202,7 +239,6 @@
   }
 
   .my-h4 {
-    /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
     @extend .my-h2;
 
     font-size: 16px;
@@ -213,7 +249,6 @@
 
   .my-h5,
   .my-h6 {
-    /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
     @extend .my-h2;
 
     font-size: 14px;

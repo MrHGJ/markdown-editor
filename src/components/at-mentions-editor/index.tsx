@@ -8,8 +8,10 @@ import {
   transformNodeListToMentionData,
 } from './types'
 import cls from 'classnames'
-import { fetchUsers, getSelectionCoords, getEditorRange } from './tools'
+import { fetchUsers, getSelectionCoords, getEditorRange, resetRange } from './tools'
+
 import './index.scss'
+import { ToolBar } from './toolbar'
 interface IProps {
   value: string
   mentions?: IMention[]
@@ -17,6 +19,7 @@ interface IProps {
   placeholder?: string
   maxLength?: number
   minHeight?: number
+  showToolBar?: boolean
   onChange: (value: string, mentions: IMention[]) => void
   onFocus?: () => void
   onBlur?: () => void
@@ -31,6 +34,7 @@ export const AtMentionsEditor = (props: IProps) => {
     placeholder = '',
     maxLength = -1,
     minHeight = -1,
+    showToolBar = true,
     onChange = () => {},
     onFocus = () => {},
     onBlur = () => {},
@@ -437,6 +441,7 @@ export const AtMentionsEditor = (props: IProps) => {
 
   return (
     <div className={`at-mentions ${className}`}>
+      {showToolBar && <ToolBar editorRef={editorRef} editorRange={editorRange} />}
       {/* 真正的输入框 */}
       <div
         className='at-mentions__editor'

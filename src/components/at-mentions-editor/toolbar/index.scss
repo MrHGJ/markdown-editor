@@ -1,0 +1,40 @@
+.toolbar {
+  position: sticky;
+  z-index: 100;
+  top: -30px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 36px;
+  padding: 0 12px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    width: 27px;
+    height: 27px;
+    border-radius: 28px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f7f7f7;
+    }
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .vertical-divider {
+    width: 1px;
+    height: 14px;
+    background: #e5e5e5;
+    border-radius: 1px;
+    margin: 0 2px;
+  }
+}
